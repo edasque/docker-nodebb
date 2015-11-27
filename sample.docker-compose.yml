@@ -1,0 +1,18 @@
+nodebb:
+  image: edasque/nodebb
+  ports:
+   - "4567:4567"
+  links:
+   - redis
+  environment:
+   - AWS_ACCESS_KEY_ID=CHANGE_ME
+   - AWS_SECRET_ACCESS_KEY=CHANGE_ME
+   - S3_UPLOADS_BUCKET=CHANGE_ME
+
+redis:
+  image: edasque/nodebb-redis
+  volumes:
+   - /pathToRepo/redis/data:/data
+  expose:
+   # only seen by linked containers
+   - "6379:6379"
