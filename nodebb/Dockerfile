@@ -1,5 +1,5 @@
 # Pull base image.
-FROM node:4-wheezy
+FROM node:4-slim
 MAINTAINER Erik Dasque <erik@frenchguys.com>
 
 # Install base packages
