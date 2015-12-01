@@ -10,7 +10,7 @@ RUN apt-get install imagemagick build-essential git -y
 
 # Install nodebb
 RUN cd /opt && git clone -b v0.9.x https://github.com/NodeBB/NodeBB nodebb
-
+RUN cd /opt/nodebb && head package.json
 # Create a mountable volume
 VOLUME /opt/nodebb
 
