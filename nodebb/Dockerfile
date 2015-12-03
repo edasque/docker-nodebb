@@ -8,7 +8,7 @@ RUN apt-get upgrade -y
 RUN apt-get install imagemagick build-essential git -y
 
 # Install nodebb
-RUN cd /opt && git clone -b v0.9.x https://github.com/NodeBB/NodeBB nodebb
+RUN cd /opt && git clone -b v0.9.0 https://github.com/NodeBB/NodeBB nodebb
 
 # Define working directory.
 WORKDIR /opt/nodebb
