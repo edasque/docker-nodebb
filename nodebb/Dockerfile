@@ -16,9 +16,9 @@ WORKDIR /opt/nodebb
 RUN npm install
 
 ## my plugins of choice
-RUN npm install gm nodebb-plugin-composer-redactor nodebb-plugin-recent-cards
-RUN npm install nodebb-plugin-s3-uploads nodebb-plugin-emailer-mandrill
-RUN npm install nodebb-plugin-pushbullet
+## RUN npm install gm nodebb-plugin-composer-redactor nodebb-plugin-recent-cards
+## RUN npm install nodebb-plugin-s3-uploads nodebb-plugin-emailer-mandrill
+## RUN npm install nodebb-plugin-pushbullet
 # RUN npm install nodebb-plugin-poll
 
 # Create a mountable volume
