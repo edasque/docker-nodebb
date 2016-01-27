@@ -1,0 +1,22 @@
+
+nodebb:
+  image: nodebb/nodebb
+  ports:
+   - "4567:4567"
+  links:
+   - redis
+   - es
+#uncomment for AWS s3 backups
+#  environment:
+#   - AWS_ACCESS_KEY_ID=CHANGE_ME
+#   - AWS_SECRET_ACCESS_KEY=CHANGE_ME
+#   - S3_UPLOADS_BUCKET=CHANGE_ME
+
+es:
+  image: elasticsearch
+  ports: "9200:9200"
+
+redis:
+  image: redis:3.0.6
+  volumes:
+   - /pathToRepo/redis/data:/data
