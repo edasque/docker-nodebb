@@ -10,7 +10,7 @@ nodebb:
    - S3_UPLOADS_BUCKET=CHANGE_ME
 
 redis:
-  image: edasque/nodebb-redis
+  image: redis
   volumes:
    - /pathToRepo/redis/data:/data
   expose:
