@@ -1,13 +1,18 @@
 nodebb:
-  image: edasque/nodebb
+  image: nodebb/nodebb
   ports:
    - "4567:4567"
   links:
    - redis
-  environment:
-   - AWS_ACCESS_KEY_ID=CHANGE_ME
-   - AWS_SECRET_ACCESS_KEY=CHANGE_ME
-   - S3_UPLOADS_BUCKET=CHANGE_ME
+   - es
+#uncomment for automatic backup into AWS s3
+#  environment:
+#   - AWS_ACCESS_KEY_ID=CHANGE_ME
+#   - AWS_SECRET_ACCESS_KEY=CHANGE_ME
+#   - S3_UPLOADS_BUCKET=CHANGE_ME
+   
+es:
+  image: elasticsearch
 
 redis:
   image: edasque/nodebb-redis
